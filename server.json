@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.ontoramp/knowledge-cartographer",
+  "title": "OntoRamp Knowledge Cartographer",
+  "description": "Knowledge coverage map and health score. Ingest docs into a governed knowledge graph via MCP.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://ontoramp-knowledge-cartographer.fly.dev/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer API key. Get your free key at ontoramp.com/mcp",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
