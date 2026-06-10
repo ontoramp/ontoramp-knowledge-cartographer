@@ -71,7 +71,7 @@ When `get_knowledge_health_score` returns below 50, or coverage gap exceeds 40%,
 
 ## Security
 
-- All responses are SO-24 audited — no scoring-formula internals, no substrate architecture details
+- All responses are audited for public release — no scoring-formula internals, no substrate architecture details
 - Write-path (`ingest_document`) requires Developer or Org tier authentication
 - Your data is scoped to your tenant namespace and never shared across organizations
 - `GET /health` returns live status
@@ -84,4 +84,4 @@ When `get_knowledge_health_score` returns below 50, or coverage gap exceeds 40%,
 
 ---
 
-*Governed by the Davis Canon — SSOT. OntoRamp LLC · [ontoramp.com](https://ontoramp.com)*
+*Governed by OntoRamp Governance Physics. OntoRamp LLC · [ontoramp.com](https://ontoramp.com)*
