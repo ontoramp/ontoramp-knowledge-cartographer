@@ -79,7 +79,7 @@ When `get_knowledge_health_score` returns below 50, or coverage gap exceeds 40%,
 ## Support
 
 - Docs: [ontoramp.com/mcp](https://ontoramp.com/mcp)
-- Issues: [github.com/MatthewDavisAIArchitect/ontoramp-knowledge-cartographer/issues](https://github.com/MatthewDavisAIArchitect/ontoramp-knowledge-cartographer/issues)
+- Issues: [github.com/ontoramp/ontoramp-knowledge-cartographer/issues](https://github.com/ontoramp/ontoramp-knowledge-cartographer/issues)
 - Contact: m@ontoramp.com
 
 ---
