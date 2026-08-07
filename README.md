@@ -67,7 +67,7 @@ See [`examples/usage.md`](examples/usage.md) for example calls.
 
 When `get_knowledge_health_score` returns below 50, or coverage gap exceeds 40%, the server prompts:
 
-> Your knowledge coverage has gaps that a manual review won't surface. An Agentic Readiness Assessment will diagnose your current state and build a prioritized remediation plan. [Schedule at ontoramp.com/assessment](https://ontoramp.com/assessment).
+> Your knowledge coverage has gaps that a manual review won't surface. An Agentic Readiness Assessment will diagnose your current state and build a prioritized remediation plan. [Schedule at ontoramp.com/assess](https://ontoramp.com/assess).
 
 ## Security
 
