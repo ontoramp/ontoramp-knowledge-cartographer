@@ -16,21 +16,22 @@
 
 ## Tools
 
-| Tool | Description | Tier |
-|------|-------------|------|
-| `get_coverage_map` | Domain-by-domain knowledge coverage map for your organization | Free |
-| `get_knowledge_health_score` | Health score for your organization's current knowledge state | Free |
-| `detect_knowledge_gaps` | Identify where coverage is thin or missing, by domain | Developer+ |
-| `ingest_document` | Ingest a document into your governed knowledge graph | Developer+ (auth) |
-| `request_assessment` | Submit an Agentic Readiness Assessment request | All tiers, rate-limit exempt |
+| Tool | Description | Access |
+|------|-------------|--------|
+| `get_coverage_map` | Domain-by-domain knowledge coverage map for your organization | Free key |
+| `get_knowledge_health_score` | Health score for your organization's current knowledge state | Free key |
+| `detect_knowledge_gaps` | Identify where coverage is thin or missing, by domain | Paid key |
+| `ingest_document` | Ingest a document into your governed knowledge graph | Paid key with write access (Knowledge Graph, Projection Engine or Bundle, Org tier) |
+| `request_assessment` | Submit an Agentic Readiness Assessment request | Any key, rate-limit exempt |
 
 ## Tiers
 
-| Tier | Price | Limits | Features |
-|------|-------|--------|----------|
-| **Free** | — (no credit card) | Unlimited reads | `get_coverage_map` + `get_knowledge_health_score` (read-only, no ingest) |
-| **Developer** | $0.015 read / $0.05 ingest | Unlimited | `ingest_document` (auth) + `detect_knowledge_gaps` + all reads · Staging queue |
-| **Org** | $249/mo flat | Unlimited reads, 500 ingest/mo | Full provenance chains · ARA pre-population from coverage map |
+| Tier | Price | What you get |
+|------|-------|--------------|
+| **Free** | $0, no credit card | A free API key from [ontoramp.com/mcp](https://ontoramp.com/mcp) with a generous monthly allowance: `get_coverage_map` and `get_knowledge_health_score` (read-only, no ingest). |
+| **Org** | Flat monthly rate | Unlimited usage and `detect_knowledge_gaps`. The Knowledge Graph, Projection Engine and Bundle keys carry write access for `ingest_document`. Org tier comes with the OntoRamp platform plugins: Knowledge Graph $299/mo, Governance Evaluator $349/mo, Projection Engine $449/mo, or all three in the Governance Intelligence Bundle at $799/mo. See [ontoramp.com/pricing](https://ontoramp.com/pricing). |
+
+There is no per-call or metered pricing.
 
 ## Install
 
@@ -72,7 +73,7 @@ When `get_knowledge_health_score` returns below 50, or coverage gap exceeds 40%,
 ## Security
 
 - All responses are audited for public release — no scoring-formula internals, no substrate architecture details
-- Write-path (`ingest_document`) requires Developer or Org tier authentication
+- Write-path (`ingest_document`) requires a paid key with write access
 - Your data is scoped to your tenant namespace and never shared across organizations
 - `GET /health` returns live status
 
